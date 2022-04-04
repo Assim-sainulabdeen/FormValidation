@@ -23,7 +23,8 @@ form.addEventListener("submit", (e) => {
     engine(email, 2, "Email cannot be blank");
     engine(mobile, 3, "Mobile number cannot be blank")
     engine(address, 4, "Address cannot be blank")
-    engine(password, 5, "Password cannot be blank. Must contain atleast one spaecial character");
+    engine(photo, 5, "Select image of the following format .png, .jpg and.jpeg")
+    engine(password, 6, "Password cannot be blank. Must contain atleast one spaecial character");
 });
 
 let engine = (id, serial, message) => {

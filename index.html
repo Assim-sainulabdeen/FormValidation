@@ -16,7 +16,7 @@
     <form id="form" action="#" enctype="application/x-www-form-urlencoded">
       <div>
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." minlength="3" maxlength="50" autocomplete="off"/>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." pattern="[A-Za-z]{3, 50}" autocomplete="off"/>
         <i class="fas fa-exclamation-circle failure-icon"></i>
         <i class="far fa-check-circle success-icon"></i>
         <div class="error"></div>
@@ -24,7 +24,7 @@
 
       <div>
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." class="common" autocomplete="off" />
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." pattern="[A-Za-z]{3, 50}" class="common" autocomplete="off" />
         <i class="fas fa-exclamation-circle failure-icon"></i>
         <i class="far fa-check-circle success-icon"></i>
         <div class="error first"></div>
@@ -32,7 +32,7 @@
 
       <div>
         <div class="identity">
-          <label for="gender">Gender</label>
+          <label>Gender</label>
         </div>
         <div class="identity">
           <input type="radio" name="gender" class="male" />Male
@@ -51,7 +51,6 @@
       <div>
         <label for="country">Country</label>
         <select id="country" name="country">
-          <br />
           <option value="australia">Australia</option>
           <option value="canada">Canada</option>
           <option value="usa">USA</option>
@@ -63,21 +62,24 @@
       </div>
       <div>
         <label for="mobile">Mobile</label>
-        <input type="tel" id="mobile" placeholder="Enter your mobile number" class="common" minlength="10" maxlength="10" />
+        <input type="tel" id="mobile" placeholder="Enter your mobile number" class="common" pattern="[0-9]{10}"  autocomplete="off"/>
         <i class="fas fa-exclamation-circle failure-icon"></i>
         <i class="far fa-check-circle success-icon"></i>
         <div class="error second"></div>
       </div>
       <div>
         <label for="address" class="address">Address</label>
-        <textarea id="address" rows="8" cols="35" placeholder="Enter your address"></textarea>
+        <textarea id="address" rows="8" cols="33" placeholder="Enter your address"></textarea>
         <i class="fas fa-exclamation-circle failure-icon"></i>
         <i class="far fa-check-circle success-icon"></i>
         <div class="error"></div>
       </div>
       <div>
         <label for="photo">Photo</label>
-        <input type="file" id="photo" class="common" /><br />
+        <input type="file" id="photo" class="common"  accept=".png, .jpg, .jpeg*"/><br />
+        <i class="fas fa-exclamation-circle failure-icon"></i>
+        <i class="far fa-check-circle success-icon"></i>
+        <div class="error fourth"></div>
       </div>
       <div>
         <label for="password">Password</label>

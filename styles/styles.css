@@ -62,13 +62,13 @@ textarea{
   padding: 5px;
   outline: none;
   resize: none;
-  margin-left:38px;
+  margin-left:37px;
   vertical-align:-webkit-baseline-middle;
   border: 1px solid #ccc;
 }
 
 .address{
-  margin-left: 7px;
+  margin-left: 6px;
 }
 
 input[type="file"]{
@@ -78,7 +78,7 @@ input[type="file"]{
 }
 
 input[type="password"]{
-  margin-left:28px;
+  margin-left:32px;
   margin-right:13px;
 }
 
@@ -99,7 +99,12 @@ input[type="email"]{
   margin-left: 58px;
 }
 
-
+label[for="photo"]{
+  margin-left: 10px;
+}
+label[for="password"]{
+  margin-left: 10px;
+}
 
 input[type="submit"]:hover {
   background-color: #45a049;
@@ -132,18 +137,22 @@ form div i {
 }
  
 .error {
-  font-size: 14.5px;
+  font-size: 14px;
   margin-top: 5px;
 }
 .first {
   margin-left: 28px;
 }
 .second{
-  margin-left: 60px;
+  margin-left: 50px;
 }
 .third{
   text-align: center;
-  left: 127px;
+  left: 138px;
+}
+
+.fourth{
+  left: 88px;
 }
 
 .success-icon,
