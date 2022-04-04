@@ -130,10 +130,20 @@ form div i {
   top: 10px;
   padding: 10px;
 }
-
+ 
 .error {
   font-size: 14.5px;
   margin-top: 5px;
+}
+.first {
+  margin-left: 28px;
+}
+.second{
+  margin-left: 60px;
+}
+.third{
+  text-align: center;
+  left: 127px;
 }
 
 .success-icon,
@@ -141,3 +151,4 @@ form div i {
   right: 0;
   opacity: 0;
 }
+
