@@ -7,25 +7,12 @@ let fname = id("fname"),
     address=id("address")
     email = id("email"),
     password = id("password"),
-
+    photo = id("photo")
     form= id("form"),
 
     errorMsg = classes("error"),
     successIcon = classes("success-icon"),
     failureIcon = classes("failure-icon");
-
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-  
-    engine(fname, 0, "Name  cannot be blank");
-    engine(lname, 1, "Last name cannot be blank")
-    engine(email, 2, "Email cannot be blank");
-    engine(mobile, 3, "Mobile number cannot be blank")
-    engine(address, 4, "Address cannot be blank")
-    engine(photo, 5, "Select image of the following format .png, .jpg and .jpeg")
-    engine(password, 6, "Password cannot be blank. Must contain atleast one spaecial character");
-});
 
 let engine = (id, serial, message) => {
 
@@ -36,10 +23,24 @@ let engine = (id, serial, message) => {
     failureIcon[serial].style.opacity = "1";
     successIcon[serial].style.opacity = "0";
     } else {
-      errorMsg[serial].innerHTML = "";
-      id.style.border = "2px solid green";
-      
-      failureIcon[serial].style.opacity = "0";
-      successIcon[serial].style.opacity = "1";
+        errorMsg[serial].innerHTML = "";
+        id.style.border = "2px solid green";
+        
+        failureIcon[serial].style.opacity = "0";
+        successIcon[serial].style.opacity = "1";
     }
 }
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  
+    engine(fname, 0, "Name  cannot be blank");
+    engine(lname, 1, "Last name cannot be blank")
+    engine(email, 2, "Email cannot be blank");
+    engine(mobile, 3, "Mobile number cannot be blank")
+    engine(address, 4, "Address cannot be blank")
+    engine(photo, 5, "Select one image of the following format .png, .jpg or .jpeg")
+    engine(password, 6, "Password cannot be blank. Must contain atleast one special character");
+});
+
