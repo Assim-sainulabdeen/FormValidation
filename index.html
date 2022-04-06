@@ -10,13 +10,13 @@
 </head>
 <body>
   <div class="container">
-    <form id="form">
+    <form id="form" action="#" autocomplete="off" onsubmit="validateName()">
       <div class="title">Registration form</div>
       <div>
         <label for="fname">First Name</label>
         <input id="fname" type="text" placeholder="Enter your first name" name="firstName" autocomplete="off">
-        <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i><br>
+        <i class="fas fa-exclamation-circle failure-icon "></i>
+        <i class="far fa-check-circle success-icon "></i><br>
         <span class="error"></span>
       </div>
 
@@ -59,8 +59,6 @@
             <i class="far fa-check-circle success-icon"></i><br>
 
           </div>
-
-      
           <span class="error"></span>
       </div>
 

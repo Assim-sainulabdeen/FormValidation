@@ -13,10 +13,9 @@ body{
     text-align: center;
 }
 
-form {
+form{
     background-color: white;
-    margin: 0 auto;
-    margin-top: 10px;
+    margin: 10PX auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,13 +24,13 @@ form {
     padding: 50px;
 }
 
-.title {
+.title{
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-label {
+label{
     display: block;
     margin-bottom: 5px;
     text-align: left;
@@ -124,6 +123,10 @@ form div i {
   opacity: 0;
 }
 
+.common{
+    opacity: 1;
+}
+
 input[type="submit"] {
     margin-top: 15px;
     width: 100%;
@@ -138,4 +141,15 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
     opacity: 0.8;
+}
+
+span{
+    margin-bottom: 5px;
+    display:inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.common{
+    opacity: 1;
 }
