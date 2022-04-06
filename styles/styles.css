@@ -1,122 +1,110 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-div.container {
-  width: 70%;
-  border-radius: 6px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin: 20px auto;
-  text-align: center;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+body{
+    font-family: sans-serif;
+    background-color: #f2796e;
 }
 
-input[type="text"],
-select,
-.common {
-  width: 30%;
-  padding: 12px 20px;
-  margin: 8px 0 8px 20px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  outline: transparent;
+.container{
+    text-align: center;
 }
 
-input[type="submit"] {
-  width: 20%;
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0 8px 80px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+form {
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
 }
 
-.identity{
-  display: inline-block;
+.title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-input[type="email"]{
-  margin-left: 35px;
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
-input[type="date"]{
-  margin-left: 8px;
-}
-input[type="tel"]{
-  margin-left: 48px;
+form div input, select{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+select, textarea{
+    display: inline-block;
+}
 textarea{
-  padding: 5px;
-  outline: none;
-  resize: none;
-  margin-left:37px;
-  vertical-align:-webkit-baseline-middle;
-  border: 1px solid #ccc;
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.address{
-  margin-left: 6px;
+div input[type="radio"]{
+    width: 3%;
+    height:fit-content;
+    box-shadow: none;
+    display: inline-block;
+    
+}
+.identity div {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.identity input{
+    margin-left: 60px;
 }
 
-input[type="file"]{
-  margin-left:54px;
-  margin-right:10px;
-  background-color: #fff;
+.identity .sameline{
+  display: inline;  
 }
 
-input[type="password"]{
-  margin-left:32px;
-  margin-right:13px;
-}
-
-#confirmpassword{
-  margin-left:32px;
-  margin-right:76px;
-}
-
-input:focus, textarea:focus, select:focus {
-  border: 2px solid #f2796e;
-}
-
-input[type="radio"] {
-  margin-top: 16px;
-  margin-left: 40px;
-}
-input[type="email"]{
-  margin-left: 58px;
-}
-
-label[for="photo"]{
-  margin-left: 10px;
-}
-label[for="password"]{
-  margin-left: 10px;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-input[type="submit"]:focus{
-  border: none
+.identity i{
+    padding:0;
+    margin-left: 30px;
 }
 
 
-select {
-  margin-left: 42px;
+
+form div {
+    position: relative;
+    margin-bottom: 15px;
 }
+  
+input:focus, textarea:focus {
+    border: 2px solid #f2796e;
+}
+
+form div i {
+    position: absolute;
+    padding: 10px;
+}
+
+
+
+
+
 .failure-icon,
 .error {
   color: red;
@@ -125,34 +113,9 @@ select {
 .success-icon {
   color: green;
 }
-form div{
-  position: relative;
-  margin-bottom: 15px;
-}
 
-form div i {
-  position: absolute;
-  top: 10px;
-  padding: 10px;
-}
- 
 .error {
-  font-size: 14px;
   margin-top: 5px;
-}
-.first {
-  margin-left: 28px;
-}
-.second{
-  margin-left: 50px;
-}
-.third{
-  text-align: center;
-  left: 138px;
-}
-
-.fourth{
-  left: 88px;
 }
 
 .success-icon,
@@ -161,3 +124,18 @@ form div i {
   opacity: 0;
 }
 
+input[type="submit"] {
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background-color: #f2796e;
+    border: 2px solid #f2796e;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+input[type="submit"]:hover {
+    opacity: 0.8;
+}

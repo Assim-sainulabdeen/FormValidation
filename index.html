@@ -1,103 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Validation</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles.css">
   <script src="js/font.js"></script>
 </head>
-
 <body>
   <div class="container">
-    <h1 class="title">Registration form</h1>
-    <form id="form" action="#" enctype="application/x-www-form-urlencoded">
+    <form id="form">
+      <div class="title">Registration form</div>
       <div>
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." pattern="[A-Za-z]{3,50}" autocomplete="off" title="Name cannot be numbers" />
+        <input id="fname" type="text" placeholder="Enter your first name" name="firstName" autocomplete="off">
         <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error"></div>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error"></span>
       </div>
 
       <div>
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." pattern="[A-Za-z]{1,50}" class="common" autocomplete="off" title="Last name can contain only letters" />
+        <input id="lname" type="text" placeholder="Enter your last name">
         <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error first"></div>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error"></span>
       </div>
 
-      <div>
-        <div class="identity">
-          <label>Gender</label>
-        </div>
-        <div class="identity">
-          <input type="radio" name="gender" class="male" />Male
-          <input type="radio" name="gender" />Female
-          <input type="radio" name="gender" />Others
-        </div>
-      </div>
-
-      <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" class="common" placeholder="example@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="off" />
-        <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error"></div>
-      </div>
       <div>
         <label for="country">Country</label>
-        <select id="country" name="country">
+        <select id="country" name="country" aria-placeholder="Select your country">
+          <option disabled selected>Select your Country</option>
           <option value="India">India</option>
           <option value="australia">Australia</option>
           <option value="canada">Canada</option>
           <option value="usa">USA</option>
         </select>
+        <i class="fas fa-exclamation-circle failure-icon"></i>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error"></span>
       </div>
+
+      <div class="identity">
+          <label>Gender</label>
+
+          <div>
+            <input id="male" type="radio">
+            <label for="male" class="sameline">Male</label>
+
+            <input id="female" type="radio">
+            <label for="female" class="sameline spacing">Female</label>
+            
+            <input id="others" type="radio">
+            <label for="others" class="sameline spacing">Others</label>
+            
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i><br>
+
+          </div>
+
+      
+          <span class="error"></span>
+      </div>
+
       <div>
-        <label for="dateofbirth">Date of Birth</label>
-        <input type="date" id="dateofbirth" name="DateofBirth" class="common" min="1990-01-01" max="2002-12-31" />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@gmail.com" autocomplete="off">
+        <i class="fas fa-exclamation-circle failure-icon"></i>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error"></span>
       </div>
+
       <div>
         <label for="mobile">Mobile</label>
-        <input type="tel" id="mobile" placeholder="Enter your mobile number" class="common" title="Can contain only Numbers" pattern="[6-9]{1}[0-9]{9}" autocomplete="off" />
+        <input type="tel" id="mobile" placeholder="Enter your mobile number"  autocomplete="off" />
         <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error second"></div>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error"></span>
       </div>
+
+      <div>
+        <label for="dateofbirth">Date of Birth</label>
+        <input type="date" id="dateofbirth" name="DateofBirth" min="1990-01-01" max="2002-12-31" />
+        <i class="fas fa-exclamation-circle failure-icon"></i>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error"></span>
+      </div>
+
       <div>
         <label for="address" class="address">Address</label>
-        <textarea id="address" rows="8" cols="33" placeholder="Enter your address" minlength="10" maxlength="200"></textarea>
+        <textarea id="address" rows="8" cols="33" placeholder="Enter your address"></textarea>
         <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error"></div>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error"></span>
       </div>
-      <div>
-        <label for="photo">Photo</label>
-        <input type="file" id="photo" class="common" accept=".png, .jpg, .jpeg*" /><br />
-        <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error fourth"></div>
-      </div>
+
       <div>
         <label for="password">Password</label>
-        <input type="password" id="password" class="common" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,}" />
+        <input type="password" id="password" placeholder="Enter Password"  />
         <i class="fas fa-exclamation-circle failure-icon"></i>
-        <i class="far fa-check-circle success-icon"></i>
-        <div class="error third"></div>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error "></span>
+      </div>
+
+      <div>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password"  />
+        <i class="fas fa-exclamation-circle failure-icon"></i>
+        <i class="far fa-check-circle success-icon"></i><br>
+        <span class="error "></span>
       </div>
 
       <div class="submit">
         <input type="submit" value="Submit">
       </div>
-
     </form>
   </div>
 
   <script src="js/app.js"></script>
 </body>
-
 </html>
