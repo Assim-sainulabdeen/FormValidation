@@ -86,7 +86,7 @@ function validateGender(){
     let failureIcon= gender.parentElement.querySelector(".failure-icon");
     
     if (document.querySelector("#male").checked == false && document.querySelector("#female").checked == false && document.querySelector("#others").checked == false){
-        return [d.innerHTML="Please select your gender", failureIcon.classList.add("common")];
+        return [d.innerHTML="Please select your gender", failureIcon.classList.add("failure")];
     }else{
         return d.innerHTML="";
     }
@@ -151,7 +151,7 @@ function validateAddress(){
 function validateFile(){
 
     let k = photo.parentElement.querySelector(".error");
-    let failureIcon = photo.parentElement.querySelector(".error");
+    let failureIcon = photo.parentElement.querySelector(".failure-icon");
 
     if (photo.value === ""){
         return ([k.innerHTML = "Select a file", failureIcon.classList.add("common")]);
@@ -163,9 +163,9 @@ function validateFile(){
         let checkFile = fileExtension.includes(inputFile);
 
         if(! checkFile){
-            return k .innerHTML="Select a valid file";
+            return [k .innerHTML="Select a valid file", failureIcon.classList.add("common")];
         }else{
-            return k .innerHTML="";
+            return [k .innerHTML="",  failureIcon.classList.add("failure")];
         }
     }
 
@@ -184,7 +184,7 @@ function validatePassword(){
 
 function confirmPass(){
     let j = confirmPassword.parentElement.querySelector(".error");
-    let failureIcon = password.parentElement.querySelector(".failure-icon");
+    let failureIcon = confirmPassword.parentElement.querySelector(".failure-icon");
 
     if (confirmPassword.value === password.value){
         return [j.innerHTML="", failureIcon.classList.add("failure")];
@@ -192,9 +192,3 @@ function confirmPass(){
         return [j.innerHTML="Passwords do not match", failureIcon.classList.add("common")];
     }
 }
-
-
-
-
-
-
