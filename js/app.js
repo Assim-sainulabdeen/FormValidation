@@ -36,36 +36,32 @@ function validateName(){
 
     let a = fname.parentElement.querySelector(".error");
     let failureIcon= fname.parentElement.querySelector(".failure-icon");
-    let successIcon = fname.parentElement.querySelector(".success-icon");
 
     if (fname.value.trim() === ""){
-        return [a.innerHTML= "Name cannot be empty.", failureIcon.classList.add("common")];    
+        return (a.innerText= "*Name cannot be empty.", failureIcon.classList.add("common"));    
     }else if(fname.value.trim().length < 3){
-        return[a.innerHTML = "Name must contain atleast 3 characters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
+        return(a.innerText = "Name must contain atleast 3 characters", failureIcon.classList.add("common"));
     }else if (fname.value.trim().length > 50){
-        return [a.innerHTML = "Name can be a maximum of 50 characters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
+        return (a.innerText = "Name can be a maximum of 50 characters", failureIcon.classList.add("common"));
     }else if (!fname.value.match(regex)) {
-        return [a.innerHTML = "Name can only contain letters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
+        return (a.innerText = "Name can only contain letters", failureIcon.classList.add("common"));
     }else{
-        [a.innerHTML = "", successIcon.classList.add("failure"), failureIcon.classList.add("failure")];
+        (a.innerText = "", failureIcon.classList.add("failure"));
     }
 }
 
 function validateLastName(){
     let b= lname.parentElement.querySelector(".error");
     let failureIcon= lname.parentElement.querySelector(".failure-icon");
-    let successIcon = lname.parentElement.querySelector(".success-icon");
 
     if (lname.value.trim() === ""){
-        return [b.innerHTML= "Last name cannot be empty.", failureIcon.classList.add("common")];    
-    }else if(lname.value.trim().length < 1){
-        return[b.innerHTML = "Last name must contain atleast 1 character", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
+        return (b.innerText= "Last name cannot be empty.", failureIcon.classList.add("common"));    
     }else if (lname.value.trim().length > 50){
-        return [b.innerHTML = "Last Name can be a maximum of 50 characters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
+        return (b.innerText = "Last Name can be a maximum of 50 characters", failureIcon.classList.add("common"));
     }else if (!lname.value.match(regex)) {
-        return [b.innerHTML = "Last Name can only contain letters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
+        return (b.innerText = "Last Name can only contain letters", failureIcon.classList.add("common"));
     }else{
-        [b.innerHTML = "", successIcon.classList.add("failure"), failureIcon.classList.add("failure")];
+        (b.innerText = "", failureIcon.classList.add("failure"));
     }
 }
 
@@ -74,9 +70,9 @@ function validateCountry(){
     let failureIcon= country.parentElement.querySelector(".failure-icon");
 
     if(country.value ==="Select your Country"){
-       return [c.innerHTML="Please Select your country", failureIcon.classList.add("common")];
+       return (c.innerText="Please Select your country", failureIcon.classList.add("common"));
     }else{
-        return [c.innerHTML="", failureIcon.classList.add("failure")];
+        return (c.innerText="", failureIcon.classList.add("failure"));
     }
 }
 
@@ -86,9 +82,9 @@ function validateGender(){
     let failureIcon= gender.parentElement.querySelector(".failure-icon");
     
     if (document.querySelector("#male").checked == false && document.querySelector("#female").checked == false && document.querySelector("#others").checked == false){
-        return [d.innerHTML="Please select your gender", failureIcon.classList.add("failure")];
+        return (d.innerText="Please select your gender", failureIcon.classList.add("failure"));
     }else{
-        return d.innerHTML="";
+        return d.innerText="";
     }
 }
 
@@ -99,11 +95,11 @@ function validateEmail(){
     let failureIcon= email.parentElement.querySelector(".failure-icon");
 
     if (email.value.trim()===""){
-        return [e.innerHTML= "Email field cannot be empty", failureIcon.classList. add("common")];
+        return (e.innerText= "Email field cannot be empty", failureIcon.classList. add("common"));
     }else if (!email.value.trim().match(emailRegexp)){
-        return [e.innerHTML= "Enter a valid email", failureIcon.classList. add("common")]
+        return (e.innerText= "Enter a valid email", failureIcon.classList. add("common"))
     }else{
-        return [e.innerHTML= "", failureIcon.classList.add("failure")]
+        return (e.innerText= "", failureIcon.classList.add("failure"))
     }
 }
 
@@ -113,13 +109,13 @@ function validateMobileNumber(){
     let failureIcon = mobile.parentElement.querySelector(".failure-icon");
 
     if(mobile.value.trim()===""){
-        return [f.innerHTML = "Please fill the empty field", failureIcon.classList.add("common")];
+        return (f.innerText = "Please fill the empty field", failureIcon.classList.add("common"));
     }else if(mobile.value.trim().length != 10){
-        return [f.innerHTML = "Please complete the phone number", failureIcon.classList.add("common")];
+        return (f.innerText = "Please complete the phone number", failureIcon.classList.add("common"));
     }else if (!mobile.value.trim().match(mobileRegexp)){
-        return [f.innerHTML= "Please use numbers only", failureIcon.classList.add("common")];
+        return (f.innerText= "Please use numbers only", failureIcon.classList.add("common"));
     }else{
-        return [f.innerHTML ="", failureIcon.classList.add("failure") ]
+        return (f.innerText ="", failureIcon.classList.add("failure") )
     }
 }
 
@@ -129,9 +125,9 @@ function validateDob(){
     let failureIcon = dob.parentElement.querySelector(".failure-icon");
 
     if(dob.value.trim() == ""){
-        return [g.innerHTML = "Please fill the empty field", failureIcon.classList.add("common")];
+        return (g.innerText = "Please fill the empty field", failureIcon.classList.add("common"));
     }else{
-        return [g.innerHTML = "", failureIcon.classList.add("failure")];
+        return (g.innerText = "", failureIcon.classList.add("failure"));
     }
 }
 
@@ -140,11 +136,11 @@ function validateAddress(){
     let failureIcon = address.parentElement.querySelector(".failure-icon");
 
     if(address.value.trim() == ""){
-        return [h.innerHTML = "Please fill the empty field", failureIcon.classList.add("failure")];
+        return (h.innerText = "Please fill the empty field", failureIcon.classList.add("failure"));
     }else if (address.value.trim(). length < 15 || address.value.trim().length > 200) {
-        return [h.innerHTML = "Address cannot be less than 15 characters and can have a maximum of 200 characters", failureIcon.classList.add("failure")];
+        return (h.innerText = "Address cannot be less than 15 characters and can have a maximum of 200 characters", failureIcon.classList.add("failure"));
     }else{
-        return [h.innerHTML = "", failureIcon.classList.add("failure")];
+        return (h.innerText = "", failureIcon.classList.add("failure"));
     }
 }
 
@@ -154,18 +150,18 @@ function validateFile(){
     let failureIcon = photo.parentElement.querySelector(".failure-icon");
 
     if (photo.value === ""){
-        return ([k.innerHTML = "Select a file", failureIcon.classList.add("common")]);
+        return ((k.innerText = "Select a file", failureIcon.classList.add("common")));
     }else{
         let fileName=photo.value.trim();
-        let fileExtension=["jpeg","jpg"];
+        let fileExtension=("jpeg","jpg");
         let imageExtension=fileName.lastIndexOf(".");
         let inputFile = fileName.substring(imageExtension + 1);
         let checkFile = fileExtension.includes(inputFile);
 
         if(! checkFile){
-            return [k .innerHTML="Select a valid file", failureIcon.classList.add("common")];
+            return (k .innerText="Select a valid file", failureIcon.classList.add("common"));
         }else{
-            return [k .innerHTML="",  failureIcon.classList.add("failure")];
+            return (k .innerText="",  failureIcon.classList.add("failure"));
         }
     }
 
@@ -176,11 +172,11 @@ function validatePassword(){
     let failureIcon = password.parentElement.querySelector(".failure-icon");
 
     if (password.value.trim() == ""){
-        return ([i.innerHTML = "Enter a Password", failureIcon.classList.add("common")]);
+        return ((i.innerText = "Enter a Password", failureIcon.classList.add("common")));
     }else if(password.value.match(passwordRegexp)){
-        return ([i.innerHTML = "", failureIcon.classList.add("failure")]);
+        return ((i.innerText = "", failureIcon.classList.add("failure")));
     }else{
-        return ([i.innerHTML = "Enter a strong password", failureIcon.classList.add("common")])
+        return ((i.innerText = "Enter a strong password", failureIcon.classList.add("common")))
     }
 }
 
@@ -188,9 +184,15 @@ function confirmPass(){
     let j = confirmPassword.parentElement.querySelector(".error");
     let failureIcon = confirmPassword.parentElement.querySelector(".failure-icon");
 
-    if (confirmPassword.value === password.value){
-        return [j.innerHTML="", failureIcon.classList.add("failure")];
-    }else{
-        return [j.innerHTML="Passwords do not match", failureIcon.classList.add("common")];
+    if ( confirmPassword.value == ""){
+        return (j.innerText = "Confirm your password", failureIcon.classList.add("common"));
+       
+    }else if (confirmPassword.value === password.value){
+        return (j.innerText="", failureIcon.classList.add("failure"));
+    }
+    else{
+        return (j.innerText="Passwords do not match", failureIcon.classList.add("common"));
     }
 }
+
+

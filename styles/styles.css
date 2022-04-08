@@ -154,3 +154,11 @@ span{
 .failure{
     opacity: 0;
 }
+
+.border{
+    border: 2px solid red;;
+}
+
+.no-border{
+    border: none;
+}
