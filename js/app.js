@@ -40,11 +40,11 @@ function validateName(){
 
     if (fname.value.trim() === ""){
         return [a.innerHTML= "Name cannot be empty.", failureIcon.classList.add("common")];    
-    } else if(fname.value.trim().length < 3){
+    }else if(fname.value.trim().length < 3){
         return[a.innerHTML = "Name must contain atleast 3 characters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
-    } else if (fname.value.trim().length > 50){
+    }else if (fname.value.trim().length > 50){
         return [a.innerHTML = "Name can be a maximum of 50 characters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
-    } else if (!fname.value.match(regex)) {
+    }else if (!fname.value.match(regex)) {
         return [a.innerHTML = "Name can only contain letters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
     }else{
         [a.innerHTML = "", successIcon.classList.add("failure"), failureIcon.classList.add("failure")];
@@ -58,11 +58,11 @@ function validateLastName(){
 
     if (lname.value.trim() === ""){
         return [b.innerHTML= "Last name cannot be empty.", failureIcon.classList.add("common")];    
-    } else if(lname.value.trim().length < 1){
+    }else if(lname.value.trim().length < 1){
         return[b.innerHTML = "Last name must contain atleast 1 character", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
-    } else if (lname.value.trim().length > 50){
+    }else if (lname.value.trim().length > 50){
         return [b.innerHTML = "Last Name can be a maximum of 50 characters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
-    } else if (!lname.value.match(regex)) {
+    }else if (!lname.value.match(regex)) {
         return [b.innerHTML = "Last Name can only contain letters", failureIcon.classList.add("common"), successIcon.classList.add("failure")];
     }else{
         [b.innerHTML = "", successIcon.classList.add("failure"), failureIcon.classList.add("failure")];
@@ -100,7 +100,7 @@ function validateEmail(){
 
     if (email.value.trim()===""){
         return [e.innerHTML= "Email field cannot be empty", failureIcon.classList. add("common")];
-    } else if (!email.value.trim().match(emailRegexp)){
+    }else if (!email.value.trim().match(emailRegexp)){
         return [e.innerHTML= "Enter a valid email", failureIcon.classList. add("common")]
     }else{
         return [e.innerHTML= "", failureIcon.classList.add("failure")]
@@ -114,7 +114,7 @@ function validateMobileNumber(){
 
     if(mobile.value.trim()===""){
         return [f.innerHTML = "Please fill the empty field", failureIcon.classList.add("common")];
-    } else if(mobile.value.trim().length != 10){
+    }else if(mobile.value.trim().length != 10){
         return [f.innerHTML = "Please complete the phone number", failureIcon.classList.add("common")];
     }else if (!mobile.value.trim().match(mobileRegexp)){
         return [f.innerHTML= "Please use numbers only", failureIcon.classList.add("common")];
@@ -178,7 +178,9 @@ function validatePassword(){
     if (password.value.trim() == ""){
         return ([i.innerHTML = "Enter a Password", failureIcon.classList.add("common")]);
     }else if(password.value.match(passwordRegexp)){
-        return ([i.innerHTML= ""]);
+        return ([i.innerHTML = "", failureIcon.classList.add("failure")]);
+    }else{
+        return ([i.innerHTML = "Enter a strong password", failureIcon.classList.add("common")])
     }
 }
 

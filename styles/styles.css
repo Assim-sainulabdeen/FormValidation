@@ -88,10 +88,6 @@ form div {
     position: relative;
     margin-bottom: 15px;
 }
-  
-/* input:focus, textarea:focus {
-    border: 2px solid #f2796e;
-} */
 
 form div i {
     position: absolute;
@@ -133,6 +129,7 @@ input[type="submit"] {
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 input[type="submit"]:hover {
     opacity: 0.8;
 }
@@ -153,6 +150,7 @@ span{
 .common{
     opacity: 1;
 }
+
 .failure{
     opacity: 0;
 }
