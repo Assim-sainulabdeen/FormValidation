@@ -39,7 +39,7 @@ function error(id, message){
     myId.classList.add("border")
     getId.innerText = message;
     getIcon.classList.add("common");
-};
+}
 
 function success(id, message){
     let myId = id;
@@ -48,7 +48,7 @@ function success(id, message){
     myId.classList.add("no-border")
     getId.innerText = message;
     getIcon.classList.add("failure");
-};
+}
 
 function validateName(){
 
