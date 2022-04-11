@@ -41,6 +41,15 @@ function error(id, message){
     getIcon.classList.add("common");
 }
 
+function error1(id, message){
+    let myId = id;
+    let getId = id.parentElement.querySelector(".error");
+    let getIcon = id.parentElement.querySelector(".failure-icon");
+    myId.classList.add("border")
+    getId.innerText = message;
+    getIcon.classList.add("failure");
+}
+
 function success(id, message){
     let myId = id;
     let getId = id.parentElement.querySelector(".error");
@@ -63,7 +72,7 @@ function validateName(){
     }else{
         return (success(fname, ""));
     }
-};
+}
 
 function validateLastName(){
 
@@ -76,7 +85,7 @@ function validateLastName(){
     }else{
         return (success(lname, ""));
     }
-};
+}
 
 function validateCountry(){
     
@@ -90,11 +99,11 @@ function validateCountry(){
 function validateGender(){
     
     if (document.querySelector("#male").checked == false && document.querySelector("#female").checked == false && document.querySelector("#others").checked == false){
-        return (error(gender,"Please select your gender"));
+        return (error1(gender,"Please select your gender"));
     }else{
         return (success(gender, ""));
     }
-};
+}
 
 function validateEmail(){
 
@@ -105,7 +114,7 @@ function validateEmail(){
     }else{
         (success(email, ""));
     }
-};
+}
 
 function validateMobileNumber(){
 
@@ -118,7 +127,7 @@ function validateMobileNumber(){
     }else{
         return (success(mobile, ""));
     }
-};
+}
 
 function validateDob(){
 
@@ -127,18 +136,18 @@ function validateDob(){
     }else{
         return (success(dob, ""));
     }
-};
+}
 
 function validateAddress(){
 
     if(address.value.trim() == ""){
-        return (error(address, "Please fill the empty field"));
+        return (error1(address, "Please fill the empty field"));
     }else if (address.value.trim(). length < 15 || address.value.trim().length > 200) {
-        return (error(address, "Address cannot be less than 15 characters and can have a maximum of 200 characters"));
+        return (error1(address, "Address cannot be less than 15 characters and can have a maximum of 200 characters"));
     }else{
         return (success(address, ""));
     }
-};
+}
 
 function validateFile(){
 
@@ -158,7 +167,7 @@ function validateFile(){
         }
     }
 
-};
+}
 
 function validatePassword(){
 
@@ -169,7 +178,7 @@ function validatePassword(){
     }else{
         return (error(password, "Enter a strong password"));
     }
-};
+}
 
 function confirmPass(){
 
@@ -182,4 +191,4 @@ function confirmPass(){
     else{
         return (error(confirmPassword, "Passwords do not match"));
     }
-};
+}
